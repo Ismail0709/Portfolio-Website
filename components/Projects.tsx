@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import project1 from '../public/project-1.png';
 import { Project } from '@/typings';
 import { urlFor } from '@/sanity';
 
@@ -32,7 +31,7 @@ const Projects = ({projects}: Props) => {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt=''
-              height={400} // Calculated height
+              height={400} 
               width={500}
               className='w-[500px] rounded-md'
             />

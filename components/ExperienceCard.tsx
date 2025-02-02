@@ -2,7 +2,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion';
-import { once } from 'events';
 import { Experience } from '@/typings';
 import { urlFor } from '@/sanity';
 
@@ -11,12 +10,7 @@ type Props = {
 }
 
 const ExperienceCard = ({experience}: Props) => {
-    const MotionImage = motion.create(Image)
-    const logo = require('../public/habibsons_logo.jpg')
-    const js_logo =require('../public/javascript-logo.svg')
-    const react_logo =require('../public/React.png')
-    const node_logo =require('../public/Node.png')
-    const mongo_logo =require('../public/Mongo.png')
+    const MotionImage = motion.create(Image);
 
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>

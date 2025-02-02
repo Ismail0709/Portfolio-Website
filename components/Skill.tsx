@@ -12,8 +12,7 @@ type Props = {
 
 const Skill = ({skill, directionLeft}: Props) => {
 
-    const MotionImage = motion.create(Image)
-    const sanity_logo = require('../public/Sanity.png')
+    const MotionImage = motion.create(Image);
 
   return (
     <div className='group relative flex cursor-pointer'>

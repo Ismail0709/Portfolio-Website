@@ -10,9 +10,7 @@ type Inputs = {
     message: string;
 };
 
-type Props = {}
-
-function ContactMe({}: Props) {
+function ContactMe() {
     const { 
         register, 
         handleSubmit,

@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Hero = ({pageInfo}: Props) => {
-    const[text, count] = useTypewriter({
+    const[text] = useTypewriter({
         words: [
             `I'm ${pageInfo?.name}, a dedicated Software Engineer`,
             "Learning is the key to innovation."
@@ -21,7 +21,6 @@ const Hero = ({pageInfo}: Props) => {
         delaySpeed: 2000
     });
 
-    const profileImg = require('../public/profile.jpg')
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />

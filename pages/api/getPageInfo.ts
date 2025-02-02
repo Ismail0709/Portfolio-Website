@@ -5,18 +5,23 @@ import { groq } from "next-sanity";
 
 const query = groq`
   *[_type == "pageInfo"][0]
-`
-;
+`;
 
 type Data = {
-    pageInfo: PageInfo;
+    pageInfo?: PageInfo; 
+    message?: string;    
 };
 
 export default async function handler(
-    req: NextApiRequest,
+    _: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const pageInfo: PageInfo = await sanityClient.fetch(query);
+    try {
+        const pageInfo: PageInfo = await sanityClient.fetch(query);
+        res.status(200).json({ pageInfo });
+    } catch (error) {
+        console.error("Error fetching page info:", error);
 
-    res.status(200).json({ pageInfo });
+        res.status(500).json({ message: "An error occurred while fetching page info" });
+    }
 }

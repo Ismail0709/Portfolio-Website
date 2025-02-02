@@ -2,7 +2,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import adminImage from '../public/bajwa.jpg';
 import { PageInfo } from '@/typings';
 import { urlFor } from '@/sanity';
 
