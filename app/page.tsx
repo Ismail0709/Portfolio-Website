@@ -14,7 +14,12 @@ import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchExperiences } from "@/utils/fetchExperiences";
 
 const Home = async () => {
-  const pageInfo: PageInfo = (await fetchPageInfo())[0];
+  const pageInfo: PageInfo = await fetchPageInfo();
+  if (!pageInfo) {
+    console.error("Failed to fetch page info");
+    return <div>Error fetching page info.</div>;
+  }
+
   const skills: Skill[] = await fetchSkills();
   const socials: Social[] = await fetchSocial();
   const projects: Project[] = await fetchProjects();

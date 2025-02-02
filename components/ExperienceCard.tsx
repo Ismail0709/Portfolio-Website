@@ -30,12 +30,15 @@ const ExperienceCard = ({experience}: Props) => {
         viewport={{once: true}}
         className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center' 
         src={urlFor(experience?.companyImage).url()} 
-        alt='company logo'        
+        alt='company logo' 
+        height={200}
+        width={200}       
         />
 
         <div className='px-0 md:px-10'>
             <h4 className='text-4xl font-light'>Software Engineer Intern</h4>
             <p className='font-bold text-2xl mt-1'>Habib & Sons</p>
+            {/*
             <div className='flex space-x-2 my-2'>
                 {experience.technologies.map((technology)=> (
                     <Image 
@@ -43,10 +46,13 @@ const ExperienceCard = ({experience}: Props) => {
                     className='h-10 w-10 rounded-full'
                     src={urlFor(technology.image).url()}
                     alt='Technology Image'
+                    height={40}
+                    width={40}
                     />
                 ))}
 
-            </div>
+            </div> 
+            */}
             <p className='uppercase py-5 text-gray-300'>
                 {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString()}
             </p>

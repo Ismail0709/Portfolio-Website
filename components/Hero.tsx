@@ -29,6 +29,8 @@ const Hero = ({pageInfo}: Props) => {
         className='relative rounded-full h-36 w-36 mx-auto'
         src={urlFor(pageInfo.heroImage).url()}
         alt="Picture of the author"
+        height={144}
+        width={144}
         />
         <div className='z-20'>
           <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>

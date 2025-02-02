@@ -32,6 +32,8 @@ const Projects = ({projects}: Props) => {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt=''
+              height={400} // Calculated height
+              width={500}
               className='w-[500px] rounded-md'
             />
 
@@ -48,6 +50,8 @@ const Projects = ({projects}: Props) => {
                   key={technology._id}
                   src={urlFor(technology.image).url()}
                   alt=''
+                  height={40}
+                  width={40}
                   />
                 ))}
               </div>
