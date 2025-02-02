@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { sanityClient } from "@/sanity";
 import { PageInfo } from "@/typings";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -13,15 +14,16 @@ type Data = {
 };
 
 export default async function handler(
-    _req: NextApiRequest,  // eslint-disable-line @typescript-eslint/no-unused-vars
+    _req: NextApiRequest,  
     res: NextApiResponse<Data>
 ) {
     try {
         const pageInfo: PageInfo = await sanityClient.fetch(query);
         res.status(200).json({ pageInfo });
     } catch (error) {
-        console.error("Error fetching page info:", error); // eslint-disable-line @typescript-eslint/no-unused-vars
+        console.error("Error fetching page info:", error);
 
         res.status(500).json({ message: "An error occurred while fetching page info" });
     }
 }
+/* eslint-enable @typescript-eslint/no-unused-vars */
