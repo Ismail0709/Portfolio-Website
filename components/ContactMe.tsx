@@ -27,11 +27,11 @@ function ContactMe() {
         </h3>
 
         <div className='flex flex-col space-y-10'>
-            <h4 className='text-4xl font-semibold text-center'>
-                I've got the skills you need.{" "}
-                <span className='decoration-[#F7AB0A]/50 underline'>Let’s Connect</span>
-                 
-            </h4>
+        <h4 className='text-4xl font-semibold text-center'>
+            I&apos;ve got the skills you need.{" "}
+            <span className='decoration-[#F7AB0A]/50 underline'>Let&rsquo;s Connect</span>
+        </h4>
+
 
             <div>
                 <div className='flex items-center space-x-5 justify-center'>
